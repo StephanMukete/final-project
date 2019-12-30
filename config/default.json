@@ -1,3 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://mukete:74963655@devecosystem-bzbdy.mongodb.net/test?retryWrites=true&w=majority"
+    "mongoURI": "mongodb+srv://mukete:74963655@devecosystem-bzbdy.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "mysecrettoken"
 }
