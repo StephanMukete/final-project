@@ -4,6 +4,8 @@ import { Link, Redirect } from 'react-router-dom'
 import { setAlert } from '../../actions/alert'
 import { register } from '../../actions/auth'
 import PropTypes from 'prop-types'
+import Moment from 'react-moment';
+import moment from 'moment';
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
@@ -78,6 +80,13 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             value = {password2}
             onChange = {e => onChange(e)}
             // minLength="4"
+          />
+        </div>
+        <div className="form-group">
+        <h4>Date of birth</h4>
+          <input
+            type='date'
+            name='from'
           />
         </div>
         <input type="submit" className="btn btn-primary" value="Register" />
