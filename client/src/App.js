@@ -21,8 +21,14 @@ if(localStorage.token) {
   setAuthToken(localStorage.token)
 }
 
+
+
 const App = () =>{
   useEffect(() => {
+    window.addEventListener("load", () => {
+      document.querySelector("body").classList.add("loaded")
+      document.querySelector("nav").classList.add("nav2")
+     })
     store.dispatch(loadUser())
   }, [])
 
@@ -30,16 +36,15 @@ const App = () =>{
   <Provider store={store}>
   <Router>
     <Fragment>
-      <Navbar />
+    <Navbar />
       <Route exact path='/' component = { Landing } />
-      <section className = 'container'>
         < Alert />
         <Switch>
           <Route exact path = '/register' component = { Register }/>
           <Route exact path = '/login' component = { Login }/>
           <PrivateRoute exact path = '/posts' component = {Posts} />
         </Switch>
-      </section>
+    
     </Fragment>
   </Router>
   </Provider>

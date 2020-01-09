@@ -25,12 +25,14 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     </ul>
   )
   return (
-    <nav className="navbar bg-dark">
+    <header className="page-header">
+    <nav className="nav">
       <h1>
         <Link to="/">Blog-Muket </Link>
       </h1>
   { !loading && (<Fragment>{ isAuthenticated ? authLinks : guestLinks }</Fragment>) }
     </nav>
+    </header>
   )
 }
 
