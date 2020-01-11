@@ -21,7 +21,7 @@ body {
   color: #333;
 }
 .padded{
-  padding: 0 10%;
+  padding: 3% 15%;
 }
 
 
@@ -46,7 +46,7 @@ img {
   margin: auto;
   overflow: hidden;
   padding: 0 2rem;
-  margin-top: 6rem;
+  margin-top: 0;
   margin-bottom: 3rem;
 }
 
@@ -225,7 +225,12 @@ img {
 }
 
 .round-img {
-  border-radius: 50%;
+  width: 80%;
+  border-radius: 20%;
+}
+.profile-grid{
+  display: grid;
+  grid-template: auto / 40% 60%;
 }
 
 .line {
@@ -283,10 +288,14 @@ button {
 }
 
 .form .social-input i.fa-twitter {
+
   color: #38a1f3;
 }
 .form .social-input i.fa-facebook {
   color: #3b5998;
+}
+#soc{
+  padding: 2%;
 }
 .form .social-input i.fa-instagram {
   color: #3f729b;
@@ -361,6 +370,7 @@ button {
 
 /* Profiles Page */
 .profile {
+  /* box-shadow:1px 1px 1px 2px #17a2b8; */
   display: grid;
   grid-template-columns: 2fr 4fr 2fr;
   align-items: center;
@@ -368,6 +378,11 @@ button {
   padding: 1rem;
   line-height: 1.8;
   margin-bottom: 1rem;
+}
+#dash-img{
+  border: 2px black solid;
+  padding: 2%;
+  width: 40%;
 }
 
 /* Posts Page */
@@ -452,6 +467,9 @@ button {
     grid-template-columns: 1fr;
     text-align: center;
   }
+  .profile img{
+    width: 70%;
+  }
 
   .profile ul {
     display: none;
@@ -517,9 +535,11 @@ a {
   min-height: 100vh;
 }
 
+
+
 .page-main {
   display: grid;
-  grid-template:auto / 40% 60% ;
+  grid-template:auto / 50% 50% ;
   flex-direction: column;
   justify-content: center;
   flex-grow: 1;
