@@ -1,55 +1,51 @@
-import React, { Fragment } from 'react'
-import { Link } from 'react-router-dom'
-import { connect } from 'react-redux'
-import PropTypes from 'prop-types'
-import { logout } from '../../actions/auth'
+import React, { Fragment } from "react";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { logout } from "../../actions/auth";
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
       <li>
-        <Link to='/profiles'>Blogers</Link>
+        <Link to="/posts">Posts</Link>
       </li>
       <li>
-        < Link to = '/posts'>Posts</Link>
+        <a onClick={logout} href="#!">
+          <i className="fas fa-sign-out-alt"></i>{" "}
+          <span className="hide-sm">Logout</span>
+        </a>
       </li>
-      <li>
-        <a onClick={logout} href = '#!'>
-        <i className = "fas fa-sign-out-alt"></i>{' '}
-        <span className='hide-sm'>Logout</span>
-      </a>
-      </li>
-  </ul>
-  )
+    </ul>
+  );
   const guestLinks = (
     <ul>
-            <li>
-        <Link to='/profiles'>Blogers</Link>
+      {/* <li><a href="#!">Blogs</a></li> */}
+      <li>
+        <Link to="/register">Sign Up </Link>
       </li>
-      <li><Link to="/register">Sign Up </Link></li>
-      <li><Link to="/login">Login</Link> </li>
+      <li>
+        <Link to="/login">Login</Link>{" "}
+      </li>
     </ul>
-  )
+  );
   return (
-    <header className="page-header">
-    <nav className="nav">
+    <nav className="navbar bg-dark">
       <h1>
         <Link to="/">Blog-Muket </Link>
       </h1>
-  { !loading && (<Fragment>{ isAuthenticated ? authLinks : guestLinks }</Fragment>) }
+      {!loading && (
+        <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
+      )}
     </nav>
-    </header>
-  )
-}
+  );
+};
 
 Navbar.propTypes = {
   logout: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-}
-const mapStateToProps = state =>({
-  auth: state.auth
-})
+};
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+});
 
-export default connect(
-  mapStateToProps,
-  { logout }
-)(Navbar)
+export default connect(mapStateToProps, { logout })(Navbar);

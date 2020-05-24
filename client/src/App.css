@@ -1,7 +1,7 @@
 /* Global Styles */
 :root {
   --primary-color: #17a2b8;
-  --dark-color: #1E90FF;
+  --dark-color: #1e90ff;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
   --success-color: #28a745;
@@ -14,16 +14,12 @@
 }
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
   background-color: #fff;
   color: #333;
 }
-.padded{
-  padding: 3% 15%;
-}
-
 
 a {
   color: var(--primary-color);
@@ -32,8 +28,6 @@ a {
 
 ul {
   list-style: none;
-  padding: 3%;
-  padding-left: 50%;
 }
 
 img {
@@ -46,7 +40,7 @@ img {
   margin: auto;
   overflow: hidden;
   padding: 0 2rem;
-  margin-top: 0;
+  margin-top: 6rem;
   margin-bottom: 3rem;
 }
 
@@ -131,15 +125,12 @@ img {
 .my-3 {
   margin: 3rem 0;
 }
-.buttons .btn{
-  box-shadow:1px 1px 1px 2px #ccc;
-  border-radius: 20%;
-}
+
 .btn {
   display: inline-block;
   background: var(--light-color);
   color: #333;
-  padding: 0.6rem 1.3rem;
+  padding: 0.4rem 1.3rem;
   font-size: 1rem;
   border: none;
   cursor: pointer;
@@ -216,7 +207,6 @@ img {
 
 .btn:hover {
   opacity: 0.8;
-  padding: 0.7rem 1.5rem;
 }
 
 .bg-light,
@@ -225,12 +215,7 @@ img {
 }
 
 .round-img {
-  width: 80%;
-  border-radius: 20%;
-}
-.profile-grid{
-  display: grid;
-  grid-template: auto / 40% 60%;
+  border-radius: 50%;
 }
 
 .line {
@@ -241,7 +226,7 @@ img {
 
 /* Overlay */
 .dark-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 0;
   left: 0;
@@ -260,10 +245,10 @@ img {
   color: #888;
 }
 
-.form input[type='text'],
-.form input[type='email'],
-.form input[type='password'],
-.form input[type='date'],
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="password"],
+.form input[type="date"],
 .form select,
 .form textarea {
   display: block;
@@ -273,7 +258,7 @@ img {
   border: 1px solid #ccc;
 }
 
-.form input[type='submit'],
+.form input[type="submit"],
 button {
   font: inherit;
 }
@@ -288,14 +273,10 @@ button {
 }
 
 .form .social-input i.fa-twitter {
-
   color: #38a1f3;
 }
 .form .social-input i.fa-facebook {
   color: #3b5998;
-}
-#soc{
-  padding: 2%;
 }
 .form .social-input i.fa-instagram {
   color: #3f729b;
@@ -342,7 +323,7 @@ button {
 }
 
 .navbar a:hover {
-  color: var(--primary-color);
+  color: rgba(255, 255, 255, 0.803);
 }
 
 .navbar .welcome span {
@@ -350,11 +331,12 @@ button {
 }
 
 /* Landing Page */
-/* .landing {
+.landing {
   position: relative;
-  background: url('https://www.asymptotejournal.com/blog/wp-content/uploads/2019/12/reading_resolutions.png') no-repeat center center/cover;
+  background: url("https://cdn11.bigcommerce.com/s-do0ookap9x/images/stencil/1280x1280/products/21763/28793/44193_main__20996.1551748595.jpg?c=2&imbypass=on")
+    no-repeat center center/cover;
   height: 100vh;
-} */
+}
 
 .landing-inner {
   color: #fff;
@@ -370,7 +352,6 @@ button {
 
 /* Profiles Page */
 .profile {
-  /* box-shadow:1px 1px 1px 2px #17a2b8; */
   display: grid;
   grid-template-columns: 2fr 4fr 2fr;
   align-items: center;
@@ -378,11 +359,6 @@ button {
   padding: 1rem;
   line-height: 1.8;
   margin-bottom: 1rem;
-}
-#dash-img{
-  border: 2px black solid;
-  padding: 2%;
-  width: 40%;
 }
 
 /* Posts Page */
@@ -467,9 +443,6 @@ button {
     grid-template-columns: 1fr;
     text-align: center;
   }
-  .profile img{
-    width: 70%;
-  }
 
   .profile ul {
     display: none;
@@ -485,11 +458,11 @@ button {
 
   .profile-grid {
     grid-template-areas:
-      'top'
-      'about'
-      'exp'
-      'edu'
-      'github';
+      "top"
+      "about"
+      "exp"
+      "edu"
+      "github";
   }
 
   .profile-about .skills {
@@ -502,6 +475,10 @@ button {
     margin-bottom: 0.2rem;
   }
 
+  .d img {
+    padding: 50rem;
+  }
+
   .post {
     grid-template-columns: 1fr;
   }
@@ -510,188 +487,19 @@ button {
     padding: 0.3rem 0.4rem;
   }
 }
-.page-main .buttons{
-  /* padding-left: 20%; */
-  text-shadow: none;
-  padding-top: 20%;
-}
-.button:hover{
-  padding:0 ;
+
+.my-2 img {
+  margin-top: 3%;
 }
 
-a {
-  text-decoration: none;
-  color: white;
-}
-.page-header ul {
-  display: flex;
-  width: 100%;
-}
-.page-header ul li:not(:last-child) {
-  padding-right: 15px;
-}
-.wrapper {
-  display: flex;
-  min-height: 100vh;
+/* @media screen and (min-width: 1171px) {
 }
 
-
-
-.page-main {
-  display: grid;
-  grid-template:auto / 50% 50% ;
-  flex-direction: column;
-  justify-content: center;
-  flex-grow: 1;
-  min-height: 350px;
-  /* background: var(--main-purple-color) */
-  background: url('https://media4.manhattan-institute.org/sites/as/files/New%20York%20City.banner_0.png')  no-repeat center / cover;
-  /* background: url('https://www.appdrawn.com/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJbWQyWVhKcFlXNTBjeTlZYTNOV1YxVlNaMmxyZEVnMWVYSTJObEEzY1hGek1tTXZabVl3TVRSbU1qSTRNVEZpTm1NeFpEaGxNbVl5T0RNNFpXTXhObUV4WXpjNVpqSTFOalUxTlRjell6a3haREk0TTJJd1l6UTFaamMyTkRreE1qVTJZUVk2QmtWVSIsImV4cCI6IjIwMjAtMDEtMDhUMTk6MDc6MTUuMTkxWiIsInB1ciI6ImJsb2Jfa2V5In19--a6724ffe1dea0d9cd25e58c4a4ef3a7cecc1fa0e/Blog.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22Blog.jpg%22%3B+filename%2A%3DUTF-8%27%27Blog.jpg')  no-repeat
-    center / cover; */
-    /* background: blue; */
-  color:white;
-  opacity: 0.2;
-  font-size: 19px;
-  text-shadow: 6px 4px #4169E1;
+@media screen and (min-width: 769px) and (max-width: 170px) {
 }
 
-
-.page-main h1 {
-  margin-bottom: 20px;
+@media screen and (max-width: 768px) {
 }
 
-.wrapper > * {
-  padding: 20px;
-}
-
-  /* ANIMATIONS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– */
-  .nav > *,
-  .page-main,
-  .page-footer > * {
-    opacity: 0;
-  }
-  
-  .page-header,
-  .page-footer,
-  .page-main .text-wrapper {
-    overflow: hidden;
-  }
-  
-  .page-header nav > * {
-    transform: translateY(-30px);
-  }
-  
-  .page-footer > * {
-    transform: translateY(30px);
-  }
-  
-  .page-header {
-    position: relative;
-  }
-  
-  .page-header::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: #B0C4DE;
-    z-index: 99999;
-    transform: scaleX(0);
-  }
-  
-  .page-main .text-wrapper + .text-wrapper {
-    margin-top: 10px;
-  }
-  
-  .page-main .text-wrapper * {
-    transform: translateY(120%);
-  }
-  
-  .page-main .p-wrapper * {
-    transform: translateY(-120%);
-  }
-  
-  .loaded .page-header::after {
-    animation: scaleIn 1.3s ease-in 0.2s forwards;
-    /* background: #1E90FF; */
-  }
-  
-  .loaded .page-main {
-    animation: fadeIn 1s ease-in 0.7s forwards;
-  }
-  
-  .loaded .page-header, nav > * {
-     animation: fadeIn 1s ease-in 1.0s forwards, slideIn 1.2s ease-in 1.4s forwards; 
-     background: #87CEFA;
-     color: white;
-     /* background: #1E90FF; */
-  }
-
-  .nav2{
-    opacity: 1;
-  }
-  .loaded .page-main .text-wrapper * {
-    animation: slideIn 0.6s cubic-bezier(0.54, 0.46, 0.54, 0.94) 2s forwards;
-  }
-  
-  @keyframes  slideFromLeft {
-    from {
-      position: relative;
-      left: -280%;
-    }
-    to {
-      left: 280%;
-    }
-  }
-  @keyframes  slideFromLeft2 {
-    from {
-      position: relative;
-      left: -10%;
-    }
-    to {
-      left: 10%;
-    }
-  }
-  @keyframes  slideFromDown {
-    from {
-      position: relative;
-      bottom: -20%;
-    }
-    to {
-      bottom: 10%;
-    }
-  }
-  
-  @keyframes fadeIn {
-    50% {
-      opacity: 0;
-    }
-  
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  @keyframes scaleIn {
-    100% {
-      transform: scaleX(1);
-    }
-  }
-  
-  @keyframes slideIn {
-    100% {
-      transform: translateY(0);
-    }
-  }
-  .nav {
-    
-    display: grid;
-    background-color: white;
-    grid-template: auto / 50%  50%;
-  }
-  .nav h1{
-    padding: 2% 3%;
-  }
+@media screen and (max-width: 500px) {
+} */
